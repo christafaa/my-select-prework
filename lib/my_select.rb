@@ -3,5 +3,9 @@ def my_select(collection)
   result = []
 
   while i < collection.length
-    
+    new_ele = yield collection[i]
+    result << new_ele if new_ele
+    i += 1
+  end
+  result
 end
